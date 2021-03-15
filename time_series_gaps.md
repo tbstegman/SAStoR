@@ -1,5 +1,5 @@
 
-### SAS program to fill in gaps in a time series by group
+## SAS program to fill in gaps in a time series by group
 
     ***********************************************
     *   Create a small data set to demonstrate    *
@@ -97,7 +97,7 @@ data1
     ## 6     C 2020-04-01 6
 
 ``` r
-# Forward fill in gaps in the series for each group
+# Forward fill the gaps in the series for each group
 data1 %>% 
   group_by(group) %>% 
   pad(interval='month') %>% 
